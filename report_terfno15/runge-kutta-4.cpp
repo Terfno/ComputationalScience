@@ -21,7 +21,7 @@ int main(){
 
     printf("%10.6lf %10.6lf\n",x,y);
 
-    for(i=1;i<=40;i++){
+    for(i=1;i<=10;i++){
         k1 = h * f(x, y);
         k2 = h * f(x + (h / 2), y + (k1 / 2));
         k3 = h * f(x + (h / 2) , y + (k2 / 2));

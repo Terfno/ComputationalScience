@@ -9,7 +9,7 @@ int main(){
     double x, y, h, k1, k2, k;
     char zz;
 
-    printf("\n\n4次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
+    printf("\n\n2次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
     printf("Returnキーを押してください。\n");
     scanf("%c",&zz);
 
@@ -21,9 +21,10 @@ int main(){
 
     printf("%10.6lf %10.6lf\n",x,y);
 
-    for(i=1;i<=40;i++){
+    for(i=1;i<=10;i++){
         k1 = h * f(x, y);
         k2 = h * f(x + h, y + k1);
+        k = (k1 + k2) / 2;
         x = x + h;
         y = y + k;
         
