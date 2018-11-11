@@ -6,7 +6,7 @@ double f(double x, double y){
 
 int main(){
     int i;
-    double x, y, h, k1, k2, k3, k4, k;
+    double x, y, h, k1, k2, k;
     char zz;
 
     printf("\n\n4次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
@@ -23,10 +23,7 @@ int main(){
 
     for(i=1;i<=40;i++){
         k1 = h * f(x, y);
-        k2 = h * f(x + (h / 2), y + (k1 / 2));
-        k3 = h * f(x + (h / 2) , y + (k2 / 2));
-        k4 = h * f(x + h, y + k3);
-        k = (k1 + (2 * k2) + (2 * k3) + k4) / 6;
+        k2 = h * f(x + h, y + k1);
         x = x + h;
         y = y + k;
         
