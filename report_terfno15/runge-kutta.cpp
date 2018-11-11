@@ -9,11 +9,11 @@ int main(){
     double x, y, h, k1, k2, k3, k4, k;
     char zz;
 
-    printf("4次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
-    printf("\n\nReturnキーを押してください。\n");
+    printf("\n\n4次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
+    printf("Returnキーを押してください。\n");
     scanf("%c",&zz);
 
-    printf(" z y\n");
+    printf("  x                 y\n");
 
     x = 0.0;
     y = 1.0;
