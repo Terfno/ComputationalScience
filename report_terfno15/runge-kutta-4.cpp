@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <math.h>
 
 double f(double x, double y){
-    return (x + y);
+    double e = 2.71828182846;
+    return (pow(e, -sin(x)) - y * cos(x));
 }
 
 int main(){
@@ -9,7 +11,7 @@ int main(){
     double x, y, h, k1, k2, k3, k4, k;
     char zz;
 
-    printf("\n\n4次のルンゲクッタ法により dy/dx=x+y を解きます。\n\n");
+    printf("\n\n4次のルンゲクッタ法により dy/dx=e^{-sin x}-ycos x を解きます。\n\n");
     printf("Returnキーを押してください。\n");
     scanf("%c",&zz);
 
@@ -17,7 +19,7 @@ int main(){
 
     x = 0.0;
     y = 1.0;
-    h = 0.1; //刻み幅は0.1
+    h = 0.4; //刻み幅は0.1
 
     printf("%10.6lf %10.6lf\n",x,y);
 
