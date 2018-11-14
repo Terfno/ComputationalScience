@@ -1,0 +1,700 @@
+<!DOCTYPE html><html><head>
+      <title>report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/terfno/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.11/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="15-%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88">15 &#x8A08;&#x7B97;&#x79D1;&#x5B66;&#x30EC;&#x30DD;&#x30FC;&#x30C8;</h1>
+
+<div style="text-align:center;">3-C-17 &#x672B;&#x7530; &#x8CB4;&#x4E00;</div>
+<h2 class="mume-header" id="%E4%B8%8E%E3%81%88%E3%82%89%E3%82%8C%E3%81%9F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E3%83%AB%E3%83%B3%E3%82%B2%E3%82%AF%E3%83%83%E3%82%BF4%E6%AC%A1%E5%85%AC%E5%BC%8F%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E8%A7%A3%E3%81%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E4%BD%9C%E3%82%8C">&#x4E0E;&#x3048;&#x3089;&#x308C;&#x305F;&#x5FAE;&#x5206;&#x65B9;&#x7A0B;&#x5F0F;&#x3092;&#x30EB;&#x30F3;&#x30B2;&#x30FB;&#x30AF;&#x30C3;&#x30BF;&#xFF14;&#x6B21;&#x516C;&#x5F0F;&#x306B;&#x3088;&#x3063;&#x3066;&#x89E3;&#x304F;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x4F5C;&#x308C;&#xFF0E;</h2>
+
+<h3 class="mume-header" id="1">(1)</h3>
+
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dx}=x+y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathit">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x3092;&#x89E3;&#x304F;</p>
+<p>runge-kutta.cpp</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>#include &lt;stdio.h&gt;
+
+double f(double x, double y){
+    return (x + y);
+}
+
+int main(){
+    int i;
+    double x, y, h, k1, k2, k3, k4, k;
+    char zz;
+
+    printf(&quot;\n\n4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=x+y &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;\n\n&quot;);
+    printf(&quot;Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;\n&quot;);
+    scanf(&quot;%c&quot;,&amp;zz);
+
+    printf(&quot;  x          y\n&quot;);
+
+    x = 0.0;
+    y = 1.0;
+    h = 0.1; //&#x523B;&#x307F;&#x5E45;&#x306F;0.1
+
+    printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+
+    for(i=1;i&lt;=40;i++){
+        k1 = h * f(x, y);
+        k2 = h * f(x + (h / 2), y + (k1 / 2));
+        k3 = h * f(x + (h / 2) , y + (k2 / 2));
+        k4 = h * f(x + h, y + k3);
+        k = (k1 + (2 * k2) + (2 * k3) + k4) / 6;
+        x = x + h;
+        y = y + k;
+        
+        printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+    }
+    return 0;
+}
+
+</code></pre><p>&#x5B9F;&#x884C;&#x7D50;&#x679C;</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>$ ./runge-kutta
+
+
+4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=x+y &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;
+
+Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;
+
+  x          y
+  0.000000   1.000000
+  0.100000   1.110342
+  0.200000   1.242805
+  0.300000   1.399717
+  0.400000   1.583648
+  0.500000   1.797441
+  0.600000   2.044236
+  0.700000   2.327503
+  0.800000   2.651079
+  0.900000   3.019203
+  1.000000   3.436559
+  1.100000   3.908327
+  1.200000   4.440228
+  1.300000   5.038586
+  1.400000   5.710391
+  1.500000   6.463368
+  1.600000   7.306053
+  1.700000   8.247881
+  1.800000   9.299278
+  1.900000  10.471769
+  2.000000  11.778090
+  2.100000  13.232314
+  2.200000  14.849997
+  2.300000  16.648330
+  2.400000  18.646312
+  2.500000  20.864941
+  2.600000  23.327422
+  2.700000  26.059402
+  2.800000  29.089223
+  2.900000  32.448210
+  3.000000  36.170981
+  3.100000  40.295797
+  3.200000  44.864940
+  3.300000  49.925141
+  3.400000  55.528044
+  3.500000  61.730726
+  3.600000  68.596267
+  3.700000  76.194379
+  3.800000  84.602108
+  3.900000  93.904603
+  4.000000 104.195965
+</code></pre><h3 class="mume-header" id="2">(2)</h3>
+
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>sin</mi><mo>&#x2061;</mo><mi>x</mi></mrow></msup><mo>&#x2212;</mo><mi>y</mi><mi>cos</mi><mo>&#x2061;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dx}=e^{-\sin x}-y\cos x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.913832em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.830502em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mspace mtight" style="margin-right:0.19516666666666668em;"></span><span class="mop mtight">sin</span><span class="mspace mtight" style="margin-right:0.19516666666666668em;"></span><span class="mord mathit mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">x</span></span></span></span> &#x3092;&#x89E3;&#x304F;</p>
+<p>runge-kutta.cpp</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+double f(double x, double y){
+    double e = 2.71828182846;
+    return (pow(e, -sin(x)) - y * cos(x));
+}
+
+int main(){
+    int i;
+    double x, y, h, k1, k2, k3, k4, k;
+    char zz;
+
+    printf(&quot;\n\n4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=e^{-sin x}-ycos x &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;\n\n&quot;);
+    printf(&quot;Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;\n&quot;);
+    scanf(&quot;%c&quot;,&amp;zz);
+
+    printf(&quot;  x          y\n&quot;);
+
+    x = 0.0;
+    y = 1.0;
+    h = 0.1; //&#x523B;&#x307F;&#x5E45;&#x306F;0.1
+
+    printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+
+    for(i=1;i&lt;=40;i++){
+        k1 = h * f(x, y);
+        k2 = h * f(x + (h / 2), y + (k1 / 2));
+        k3 = h * f(x + (h / 2) , y + (k2 / 2));
+        k4 = h * f(x + h, y + k3);
+        k = (k1 + (2 * k2) + (2 * k3) + k4) / 6;
+        x = x + h;
+        y = y + k;
+        
+        printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+    }
+    return 0;
+}
+
+</code></pre><p>&#x5B9F;&#x884C;&#x7D50;&#x679C;</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>$ ./runge-kutta
+
+
+4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=e^{-sin x}-ycos x &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;
+
+Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;
+
+  x          y
+  0.000000   1.000000
+  0.100000   0.995487
+  0.200000   0.983785
+  0.300000   0.967388
+  0.400000   0.948431
+  0.500000   0.928708
+  0.600000   0.909701
+  0.700000   0.892624
+  0.800000   0.878473
+  0.900000   0.868078
+  1.000000   0.862152
+  1.100000   0.861336
+  1.200000   0.866250
+  1.300000   0.877525
+  1.400000   0.895851
+  1.500000   0.922005
+  1.600000   0.956894
+  1.700000   1.001588
+  1.800000   1.057356
+  1.900000   1.125706
+  2.000000   1.208421
+  2.100000   1.307599
+  2.200000   1.425687
+  2.300000   1.565518
+  2.400000   1.730330
+  2.500000   1.923777
+  2.600000   2.149923
+  2.700000   2.413197
+  2.800000   2.718315
+  2.900000   3.070151
+  3.000000   3.473538
+  3.100000   3.933012
+  3.200000   4.452465
+  3.300000   5.034729
+  3.400000   5.681098
+  3.500000   6.390800
+  3.600000   7.160470
+  3.700000   7.983664
+  3.800000   8.850488
+  3.900000   9.747395
+  4.000000  10.657237
+</code></pre><h2 class="mume-header" id="%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E6%B3%95%E3%83%AB%E3%83%B3%E3%82%B2%E3%82%AF%E3%83%83%E3%82%BF2%E6%AC%A1%E5%85%AC%E5%BC%8F%E3%83%AB%E3%83%B3%E3%82%B2%E3%82%AF%E3%83%83%E3%82%BF4%E6%AC%A1%E5%85%AC%E5%BC%8F%E3%81%AE%E8%A8%88%E7%AE%97%E7%B5%90%E6%9E%9C%E3%81%AA%E3%82%89%E3%81%B3%E3%81%AB%E7%9C%9F%E5%80%A4%E8%A7%A3%E6%9E%90%E8%A7%A3%E3%82%92%E6%AF%94%E8%BC%83%E3%81%97%E3%81%A6%E8%A6%8B%E3%82%88">&#x30AA;&#x30A4;&#x30E9;&#x30FC;&#x6CD5;&#xFF0C;&#x30EB;&#x30F3;&#x30B2;&#x30FB;&#x30AF;&#x30C3;&#x30BF;&#xFF12;&#x6B21;&#x516C;&#x5F0F;&#xFF0C;&#x30EB;&#x30F3;&#x30B2;&#x30FB;&#x30AF;&#x30C3;&#x30BF;&#xFF14;&#x6B21;&#x516C;&#x5F0F;&#x306E;&#x8A08;&#x7B97;&#x7D50;&#x679C;&#xFF0C;&#x306A;&#x3089;&#x3073;&#x306B;&#x771F;&#x5024;&#xFF08;&#x89E3;&#x6790;&#x89E3;&#xFF09;&#x3092;&#x6BD4;&#x8F03;&#x3057;&#x3066;&#x898B;&#x3088;&#xFF0E;</h2>
+
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dx}=x+y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathit">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x3092;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x65B9;&#x6CD5;&#x3067;&#x89E3;&#x304F;&#x3002;</p>
+<p>euler.cpp</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+double f(double x, double y){
+    return (x + y);
+}
+
+int main(){
+    int i;
+    double x, y, h, k;
+    char zz;
+
+    printf(&quot;\n\n4&#x6B21;&#x306E;&#x30AA;&#x30A4;&#x30E9;&#x30FC;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=x+y &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;\n\n&quot;);
+    printf(&quot;Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;\n&quot;);
+    scanf(&quot;%c&quot;,&amp;zz);
+
+    printf(&quot;  x          y\n&quot;);
+
+    x = 0.0;
+    y = 1.0;
+    h = 0.1; //&#x523B;&#x307F;&#x5E45;&#x306F;0.1&#x3068;&#x3059;&#x308B;
+
+    printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+
+    for(i=0;i &lt;= 10;i++){
+        k = h * f(x, y);
+        x = x + h;
+        y = y + k;
+
+        printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+    }
+    return 0;
+}
+
+</code></pre><p>runge-kutta-2.cpp</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>#include &lt;stdio.h&gt;
+
+double f(double x, double y){
+    return (x + y);
+}
+
+int main(){
+    int i;
+    double x, y, h, k1, k2, k;
+    char zz;
+
+    printf(&quot;\n\n2&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=x+y &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;\n\n&quot;);
+    printf(&quot;Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;\n&quot;);
+    scanf(&quot;%c&quot;,&amp;zz);
+
+    printf(&quot;  x          y\n&quot;);
+
+    x = 0.0;
+    y = 1.0;
+    h = 0.1; //&#x523B;&#x307F;&#x5E45;&#x306F;0.1
+
+    printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+
+    for(i=1;i&lt;=40;i++){
+        k1 = h * f(x, y);
+        k2 = h * f(x + h, y + k1);
+        k = (k1 + k2) / 2;
+        x = x + h;
+        y = y + k;
+        
+        printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+    }
+    return 0;
+}
+
+</code></pre><p>runge-kutta-4.cpp</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>#include &lt;stdio.h&gt;
+
+double f(double x, double y){
+    return (x + y);
+}
+
+int main(){
+    int i;
+    double x, y, h, k1, k2, k3, k4, k;
+    char zz;
+
+    printf(&quot;\n\n4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x308A; dy/dx=x+y &#x3092;&#x89E3;&#x304D;&#x307E;&#x3059;&#x3002;\n\n&quot;);
+    printf(&quot;Return&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;\n&quot;);
+    scanf(&quot;%c&quot;,&amp;zz);
+
+    printf(&quot;  x          y\n&quot;);
+
+    x = 0.0;
+    y = 1.0;
+    h = 0.1; //&#x523B;&#x307F;&#x5E45;&#x306F;0.1
+
+    printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+
+    for(i=1;i&lt;=40;i++){
+        k1 = h * f(x, y);
+        k2 = h * f(x + (h / 2), y + (k1 / 2));
+        k3 = h * f(x + (h / 2) , y + (k2 / 2));
+        k4 = h * f(x + h, y + k3);
+        k = (k1 + (2 * k2) + (2 * k3) + k4) / 6;
+        x = x + h;
+        y = y + k;
+        
+        printf(&quot;%10.6lf %10.6lf\n&quot;,x,y);
+    }
+    return 0;
+}
+
+</code></pre><p>&#x3044;&#x305A;&#x308C;&#x3082;&#x523B;&#x307F;&#x5E45;0.1</p>
+<table>
+<thead>
+<tr>
+<th>&#x30AA;&#x30A4;&#x30E9;&#x30FC;&#x6CD5;</th>
+<th>2&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;</th>
+<th>4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;</th>
+<th>&#x89E3;&#x6790;&#x89E3;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td></td>
+</tr>
+<tr>
+<td>1.100000</td>
+<td>1.110000</td>
+<td>1.110342</td>
+<td></td>
+</tr>
+<tr>
+<td>1.220000</td>
+<td>1.242050</td>
+<td>1.242805</td>
+<td></td>
+</tr>
+<tr>
+<td>1.362000</td>
+<td>1.398465</td>
+<td>1.399717</td>
+<td></td>
+</tr>
+<tr>
+<td>1.528200</td>
+<td>1.581804</td>
+<td>1.583648</td>
+<td></td>
+</tr>
+<tr>
+<td>1.721020</td>
+<td>1.794894</td>
+<td>1.797441</td>
+<td></td>
+</tr>
+<tr>
+<td>1.943122</td>
+<td>2.040857</td>
+<td>2.044236</td>
+<td></td>
+</tr>
+<tr>
+<td>2.197434</td>
+<td>2.323147</td>
+<td>2.327503</td>
+<td></td>
+</tr>
+<tr>
+<td>2.487178</td>
+<td>2.645578</td>
+<td>2.651079</td>
+<td></td>
+</tr>
+<tr>
+<td>2.815895</td>
+<td>3.012364</td>
+<td>3.019203</td>
+<td></td>
+</tr>
+<tr>
+<td>3.187485</td>
+<td>3.428162</td>
+<td>3.436559</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E5%88%BB%E3%81%BF%E5%B9%85%E3%82%92%E5%A4%89%E3%81%88%E3%81%A6%E7%B5%90%E6%9E%9C%E3%82%92%E6%AF%94%E8%BC%83%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88">&#x523B;&#x307F;&#x5E45;&#x3092;&#x5909;&#x3048;&#x3066;&#x7D50;&#x679C;&#x3092;&#x6BD4;&#x8F03;&#x3057;&#x3066;&#x307F;&#x3088;&#xFF0E;</h2>
+
+<p>4&#x6B21;&#x306E;&#x30EB;&#x30F3;&#x30B2;&#x30AF;&#x30C3;&#x30BF;&#x6CD5;&#x306B;&#x3088;&#x3063;&#x3066; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dx}=x+y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322159999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathit">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x3092;&#x89E3;&#x304F;&#x969B;&#x306E;&#x523B;&#x307F;&#x5E45;&#x3092;&#x5909;&#x3048;&#x3066;&#x6BD4;&#x8F03;&#x3057;&#x3066;&#x307F;&#x308B;(&#x3044;&#x305A;&#x308C;&#x3082;y&#x306E;&#x5024;)&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>0.025</th>
+<th>0.05</th>
+<th>0.1</th>
+<th>0.2</th>
+<th>0.4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+</tr>
+<tr>
+<td>0.995487</td>
+<td>0.998812</td>
+<td>0.999695</td>
+<td>0.983783</td>
+<td>0.948380</td>
+</tr>
+<tr>
+<td>0.983785</td>
+<td>0.995487</td>
+<td>0.998812</td>
+<td>0.948429</td>
+<td>0.878422</td>
+</tr>
+<tr>
+<td>0.967388</td>
+<td>0.990370</td>
+<td>0.997394</td>
+<td>0.909699</td>
+<td>0.866187</td>
+</tr>
+<tr>
+<td>0.948431</td>
+<td>0.983785</td>
+<td>0.995487</td>
+<td>0.878471</td>
+<td>0.956809</td>
+</tr>
+<tr>
+<td>0.928708</td>
+<td>0.976032</td>
+<td>0.993132</td>
+<td>0.862149</td>
+<td>1.208303</td>
+</tr>
+<tr>
+<td>0.909701</td>
+<td>0.967388</td>
+<td>0.990370</td>
+<td>0.866247</td>
+<td>1.730141</td>
+</tr>
+<tr>
+<td>0.892624</td>
+<td>0.958109</td>
+<td>0.987242</td>
+<td>0.895847</td>
+<td>2.717908</td>
+</tr>
+<tr>
+<td>0.878473</td>
+<td>0.948431</td>
+<td>0.983785</td>
+<td>0.956890</td>
+<td>4.451476</td>
+</tr>
+<tr>
+<td>0.868078</td>
+<td>0.938566</td>
+<td>0.980036</td>
+<td>1.057351</td>
+<td>7.158432</td>
+</tr>
+<tr>
+<td>0.862152</td>
+<td>0.928708</td>
+<td>0.976032</td>
+<td>1.208415</td>
+<td>10.653959</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

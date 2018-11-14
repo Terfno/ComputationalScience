@@ -13,7 +13,7 @@ int main(){
     printf("ルンゲ・クッタ2次公式により \n\n");
     printf("dy/dx=y-12.0*+3.0 を解きます");
     printf("\n\nエンターキーを押してください。\n");
-    scanf("%c"&zz);
+    scanf("%c",&zz);
     printf("    X           Y\n");
 
     x=0.0; y=1.0; h=0.1;
