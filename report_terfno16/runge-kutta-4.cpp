@@ -2,8 +2,8 @@
 #include <math.h>
 
 double f(double x, double y){
-    // double e = 2.71828182846;
-    return (x+y);
+    double e = 2.71828182846;
+    return (pow(e, -sin(x)) - y * cos(x));
 }
 
 int main(){
