@@ -39,5 +39,28 @@ int main(){
 
     printf("波動方程式の差分による数値解\n\n波動方程式：Ztt=%1.01lfZxx\n",c);
     printf("\nD        : ");
-    printf("%1.01lf");
+    printf("%1.0lf<=x<=%1.0lf, 0<=t<=%3.1lf\n",a,b,k*M);
+    printf("\n初期条件    : Z(x,0)=0.05x(2-x)\n");
+    printf("\n横の刻み    : h=%4.2lf",h);
+    printf("\n縦の刻み    : k=%4.2lf",k);
+    printf("\n\nエンターキーを押せば計算結果を出力します。\n");
+    scanf("%c",&zz);
+
+    for(t=0.0,j=0;j<=M;j++){
+        for(x=0.0, i=0;i<=n;i++){
+            printf("%7.4lf",z[i][j]);
+        }
+        printf("\n");
+    }
+
+    for(t=0.0,j=0;j<=M;j++){
+        for(x=0.0,i=0;i<=n;i++){
+            printf("%7.4lf %7.4lf %7.4lf\n",x,t,z[i][j]);
+            x=x+0.25;
+        }
+        printf("\n");
+        t=t+0.25/3.0;
+    }
+
+    return 0;
 }
