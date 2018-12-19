@@ -1,4 +1,6 @@
 # 計算科学 16回
+<div style=text-align:center;>3-C-19 Sueda Takahito</div>
+
 ## 7.1
 次の微分方程式にルンゲクッタ4次公式を用いて、$y(0,1),y(0,2)$を計算せよ。
 ただし、刻み幅hを0.1とせよ。
