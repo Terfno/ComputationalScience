@@ -49,5 +49,12 @@ int main(){
     scanf("%c",&zz);
 
     // 数値解の出力　Z(x,t)の値のみを出力
-    
+    for(t=0.0;j=0;j<=M;j++){
+        for(x=0.0;i=0;i<=n;i++){
+            printf("%7.4lf %7.4lf %7.4lf\n",x,t,z[i][j]);
+        }
+        printf("\n");
+        t=t+0.25/3.0;
+    }
+    return 0;
 }
