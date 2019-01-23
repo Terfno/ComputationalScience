@@ -78,3 +78,10 @@ gr(function() {
 Unityは物理エンジンであるが、webGLを制作することも可能である。
 webGLで動くゲームを作ることも可能で、応用することでさまざまな可視化ツールを実装できる。
 
+サンプルとして球の落下を物理演算する可視化ツールを作成した。[^3]
+[^3]:参考：https://qiita.com/kenta71/items/c32760e1cc2ba01e8f9a
+
+URL:https://terfno.github.io/unity_webgl_practice/
+リポジトリ:https://github.com/Terfno/unity_webgl_practice
+
+## 参考
