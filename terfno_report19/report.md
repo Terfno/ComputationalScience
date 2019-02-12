@@ -5,6 +5,7 @@
 日付と温度をLivedoorのAPIから取得し、結果をechoによってdata.txtに入力。
 ```bash
 echo -e "日付\t温度\n13\t9\n14\t6\n15\t9" >> data.txt
+
 ```
 
 ## 可視化してみよう
